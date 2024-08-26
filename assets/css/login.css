@@ -1,0 +1,344 @@
+/* Criar variáveis */
+:root {
+    --color-light-50: #f8faf6;
+    
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+    
+    --color-blue-50: #3b82f6;
+    --color-blue-100: #2563eb;
+    --color-blue-200: #1d4ed8;
+    
+    --color-red-50: #ef4444;
+    --color-red-100: #dc2626;
+    --color-red-200: #b91c1c;
+
+    --color-red-darker-100: #6D0707;
+    --color-red-darker-200: #82090D;
+    
+    --color-green-light-50: #00ff08;
+    --color-green-light-100: #00b205;
+    --color-green-light-200: #007f04 ;
+
+
+    --color-green-50: #00b86a;
+    --color-green-100: #006e3f;
+    --color-green-200: #003f21 ;
+    
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-200: #bf46ef;
+    
+    --color-gradient: linear-gradient(90deg, var(--color-red-50), var(--color-red-100), var(--color-red-200));
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#login_form {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 15px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+    height: fit-content;
+    animation: dark-to-light .7s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+}
+
+#form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form_header h1{
+    font-size: 40px;
+    color: var(--color-red-50);
+}
+
+#mode_icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#social_media h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box label {
+    font-size: 15px;
+    color: var(--color-dark-50);
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-red-50);
+}
+
+.input-field i {
+    font-size: 20px;
+    color: var(--color-dark-900);
+}
+
+.input-field input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 20px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#forgot_password {
+    margin-top: 10px;
+}
+
+#forgot_password a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--color-dark-50);
+}
+
+#acesso{
+    padding-left: 35px;
+}
+
+
+#forgot_password a:hover {
+    color: var(--color-red-50);
+}
+
+#login_button {
+    border: none;
+    background: var(--color-gradient);
+    color: var(--color-light-50);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#login_button:hover {
+    transform: scale(1.03);
+}
+
+.dark#login_form {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark .5s ease-in-out;
+}
+
+.dark#login_form .input-field input,
+.dark#login_form .input-field i {
+    color: var(--color-light-50);
+}
+
+@keyframes dark-to-light {
+    0% {
+        background: var(--color-dark-100);
+    }
+    100% {
+        background: var(--color-light-50);
+    }
+}
+
+@keyframes light-to-dark {
+    0% {
+        background: var(--color-light-50);
+    }
+    100% {
+        background: var(--color-dark-100);
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+
+    body{
+        background-color: var(--color-red-100);
+    }
+
+    #container {
+        margin-top: 300px;
+        background: var(--color-red-100);
+        height: auto;
+    }
+
+    #login_form{
+        height: auto;
+        animation: dark-to-light .7s ease-in-out;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    #form_header h1{
+        font-size: 100px;
+    }
+
+    #mode_icon{
+        font-size: 60px;
+    }
+
+    #social_media h1{
+        font-size: 45px;
+    }
+
+    .input-field {
+        padding: 50px;
+        font-size: 50px;
+    }
+
+    .input-box label{
+        font-size: 40px;
+    }
+    
+    .input-field {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 3px;
+        cursor: text;
+        border-bottom: 1px solid var(--color-red-50);
+    }
+    
+    .input-field i {
+        font-size: 50px;
+        color: var(--color-dark-900);
+    }
+    
+    .input-field input {
+        border: none;
+        background-color: transparent;
+        width: 100%;
+        font-size: 50px;
+    }
+    
+    .input-field input:focus {
+        outline: none;
+    }
+    
+    #forgot_password {
+        margin-top: 10px;
+    }
+    
+    #forgot_password a {
+        text-decoration: none;
+        font-size: 35px;
+        color: var(--color-dark-50);
+    }
+    
+    #acesso{
+        padding-left: 35px;
+    }
+
+    #login_button{
+        margin-top: 30px;
+        padding: 25px;
+        font-size: 45px;
+    }
+}
+
+/*Estilo Janela-modal*/
+.janela-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    background: #00000056;
+}
+
+.modal {
+    width: 35%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #ffffff96;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px 10px 20px 20px;
+    position: relative; 
+}
+
+.modal h1, h3, h4{
+    color: var(--color-red-100);
+}
+
+.modal img {
+    width: 30px;
+    cursor: pointer;
+    transition: .2s;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+
+.modal img:hover {
+    transform: scale(1.15);
+}
+
+.modal p{
+    padding: 5px 0%;
+}
+
+.modal span{
+    color: var(--color-red-100);
+}
+
+.janela-modal.abrir {
+    display: flex;
+}
+
+.abrir .modal{
+    animation: abrirModal 0.5s;
+}
+
+@keyframes abrirModal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

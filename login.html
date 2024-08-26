@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTS -->
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <title>Área do(a) Usuário(a)</title>
+</head>
+<body>
+    <main id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <h1>Login</h1>
+                <i id="mode_icon" class="bi bi-moon-fill"></i>
+            </div><!-- form_header -->
+
+            <div id="social_media">
+                <h1>Área do(a) Usuário(a)</h1>
+            </div><!-- social_media -->
+
+            <div id="input">
+                <div class="input-box">
+                    <label for="email">
+                        Usuario
+                        <div class="input-field">
+                            <i class="bi bi-person-badge"></i>
+                            <input type="text" id="ra" name="ra" required>
+                        </div><!-- input-field -->
+                    </label><!-- RA -->
+                </div><!-- input-box -->
+
+                <div class="input-box">
+                    <label for="password">
+                        Password
+                        <div class="input-field">
+                            <i class="bi bi-key-fill"></i>
+                            <input type="password" id="password" name="password" required>
+                        </div><!-- input-field -->
+                    </label><!-- password -->
+
+                    <div id="forgot_password">
+                        <a href="cadastro.html">
+                            No account, register
+                        </a>
+                        <a href="#" id="acesso" onclick="abrirModal()">
+                            How to access?
+                        </a>
+                    </div><!-- forgot_password -->
+                </div><!-- input-box -->
+            </div><!-- input -->
+
+            <button type="submit" id="login_button">
+                Login
+            </button>
+        </form><!-- login_form -->
+    </main><!-- container -->
+
+    <div class="janela-modal" id="janela-modal">
+        <div class="modal">
+            <img src="assets/img/fechar.png" class="fechar" id="fechar">
+            <h1>Como acessar</h1><hr>
+            <h4>Caro Usuário,</h4><br>
+            <p>Tenha em mãos o seu Registro
+            (Nome do Usuário e Senha) essas informações são necessárias para 
+            realizar seu login.</p><br>
+            <p>Segue as informações abaixo:</p><br>
+
+            <p><span>1)</span> Insira no campo USUÁRIO o seu número.</p>
+            <p><span>2)</span>Preencha o campo SENHA com sua senha.</p>
+            <p><span>3)</span> Clique em ENTRAR</p><br>
+            <p>Pronto! Agora você já pode explorar seu ambiente 
+            acadêmico e realizar suas atividades.</p><br>
+            <p>Bons Estudos!</p>
+            <h3>Equipe Farma.</h3>
+        </div><!--modal-->
+    </div><!--janela-modal-->
+
+
+    <!-- Tema Escuro -->
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <!-- Janela Modal -->
+    <script src="assets/js/janela-modal.js"></script>
+</body>
+</html>
